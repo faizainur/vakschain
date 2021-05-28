@@ -1,0 +1,9 @@
+[1] Config Network
+export FABRIC_CFG_PATH=${PWD}/config
+export PATH=$PATH:${PWD}/bin
+cd test-network
+./network.sh up -ca
+./network.sh createChannel -c default
+
+[2] Deploy chaincode to channel
+./network.sh deployCC -ccn vaks -ccp ../vakschain -ccl go -c default
