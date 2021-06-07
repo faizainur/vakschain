@@ -6,4 +6,7 @@ cd test-network
 ./network.sh createChannel -c default
 
 [2] Deploy chaincode to channel
-./network.sh deployCC -ccn vaks -ccp ../vakschain -ccl go -c default
+./network.sh deployCC -ccn vakschain -ccp ../vakschain -ccl go -c default
+
+
+./network.sh deployCC -ccn vakschain -ccp ../vakschain -ccl go -c default -ccv 1.1 -ccs 2

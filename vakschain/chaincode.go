@@ -88,8 +88,8 @@ func (s *SmartContract) UpdateAsset(ctx contractapi.TransactionContextInterface,
 	if err != nil {
 		return err
 	}
-	if exists {
-		return fmt.Errorf("the patient %s is already exist", nik)
+	if !exists {
+		return fmt.Errorf("the patient %s is does not exist", nik)
 	}
 
 	patient := Patient{
